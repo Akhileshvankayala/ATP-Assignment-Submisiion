@@ -1,0 +1,69 @@
+###read all users
+GET http://localhost:3000/users
+//all information is shown
+//push and put support data to the api as body of the request object
+//get and delete do not support body of the request object.so that these 2 request can send data through
+//end point  
+
+###read specific user by id
+GET http://localhost:3000/users/2
+
+###create new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "id":2,
+    "name":"teddy",
+    "age":20
+}
+
+###update the user
+//from content-type to the ending brace is called as body
+//get and delete do not support body
+PUT http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"teddy",
+    "age":19
+}
+
+###delete a user by id
+DELETE http://localhost:3000/users/2
+
+
+
+###create requests for product api
+
+###get all the products
+GET http://localhost:3000/products
+
+###read product by brand
+GET http://localhost:3000/products/nike
+
+###create new product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "productId":2,
+    "name":"figurine",
+    "brand":"nike",
+    "price":100000
+}
+
+###update a product
+PUT http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "productId":1,
+    "name":"shirt",
+    "brand":"Adidas",
+    "price":1000
+}
+
+###delete a product by id
+DELETE http://localhost:3000/products/2
